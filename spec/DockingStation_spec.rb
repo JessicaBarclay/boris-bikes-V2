@@ -2,6 +2,10 @@ require './lib/docking_station.rb'
 
 describe DockingStation do
     it { is_expected.to respond_to (:release_bike) }
+    
+    it { is_expected.to respond_to(:dock).with(1).argument }
+
+    it { is_expected.to respond_to(:bike) }
 
     #it 'releases working bikes' do
         #bike = subject.release_bike
@@ -28,8 +32,11 @@ describe DockingStation do
         end
     end
 
+    describe '#dock' do
+        it 'raises an error when full' do
+            subject.dock(Bike.new)
+            expect { subject.dock Bike.new }.to raise_error 'Docking station full'
+        end
+    end
 
-    it { is_expected.to respond_to(:dock).with(1).argument }
-
-    it { is_expected.to respond_to(:bike) }
 end
