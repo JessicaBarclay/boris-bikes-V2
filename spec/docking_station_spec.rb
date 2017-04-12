@@ -51,6 +51,13 @@ describe DockingStation do
         station = DockingStation.new(30)
         expect(station.capacity).to eq 30
     end
-        
+
+    describe '#dock' do
+        it 'knows when it\'s full even if a custom capacity has been set' do
+            station = DockingStation.new(30)
+            station.capacity.times { station.dock Bike.new }
+            expect { station.dock Bike.new }.to raise_error 'Docking station full'
+        end
+    end
             
 end
