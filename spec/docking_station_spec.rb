@@ -44,7 +44,7 @@ describe DockingStation do
     end
     
     it 'has a @capacity variable' do
-        expect (subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+        expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
             
 end
