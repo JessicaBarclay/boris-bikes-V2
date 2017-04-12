@@ -46,5 +46,10 @@ describe DockingStation do
     it 'has a @capacity variable' do
         expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
+    
+    it 'can specify a value for @capacity instead of the DEFAULT_CAPACITY when initialising a station' do
+        expect(DockingStation.new(30)).to eq subject.capacity
+    end
+        
             
 end
