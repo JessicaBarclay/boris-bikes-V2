@@ -43,16 +43,8 @@ describe DockingStation do
         end
     end
     
-    
-    
-    describe '#initialize' do
-        it 'accepts a capacity parameter and sets it equal to an @capacity variable' do
-            station = DockingStation.new(30)
-            expect ( station::capacity ).to eq 30
-        end
+    it 'has a @capacity variable' do
+        expect (subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
             
-            
-            
-
 end
