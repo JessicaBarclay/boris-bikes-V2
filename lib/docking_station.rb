@@ -1,7 +1,7 @@
 require './lib/Bike'
 
 class DockingStation
-  attr_reader :bike
+  attr_reader :bikes
   
   DEFAULT_CAPACITY = 20
 
