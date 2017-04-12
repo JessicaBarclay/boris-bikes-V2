@@ -59,5 +59,11 @@ describe DockingStation do
             expect { station.dock Bike.new }.to raise_error 'Docking station full'
         end
     end
+
+    describe '#dock' do
+        it 'can report a bike as broken' do
+            expect(subject).to respond_to(:dock).with(2).arguments
+        end
+    end
             
 end
