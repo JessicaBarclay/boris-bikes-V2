@@ -48,7 +48,8 @@ describe DockingStation do
     end
     
     it 'can specify a value for @capacity instead of the DEFAULT_CAPACITY when initialising a station' do
-        expect(DockingStation.new(30)).to eq subject.capacity
+        station = DockingStation.new(30)
+        expect(station.capacity).to eq 30
     end
         
             
