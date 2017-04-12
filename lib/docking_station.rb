@@ -15,7 +15,7 @@ class DockingStation
     @bikes.pop
   end
 
-  def dock(bike)
+  def dock(bike, state=nil)
     fail 'Docking station full' if full?
     @bikes << bike
   end
