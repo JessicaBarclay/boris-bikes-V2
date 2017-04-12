@@ -42,5 +42,17 @@ describe DockingStation do
             expect { subject.dock Bike.new }.to raise_error 'Docking station full'
         end
     end
+    
+    
+    
+    describe '#initialize' do
+        it 'accepts a capacity parameter and sets it equal to an @capacity variable' do
+            station = DockingStation.new(30)
+            expect ( station::capacity ).to eq 30
+        end
+    end
+            
+            
+            
 
 end
