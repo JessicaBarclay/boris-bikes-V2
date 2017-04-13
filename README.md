@@ -6,11 +6,11 @@ This program allows the user to release a working bike, and then dock that bike 
 #### Functions of the program:
 
 1. Maintenance can create a docking station with a chosen capacity of bikes
-  1. User can dock a bike
-  2. User can release a working bike
+  - User can dock a bike
+  - User can release a working bike
 2. When a User docks a bike, they can state whether the bike is broken
-  1. If broken, that bike will stay in the dock and cannot be released
-  2. Maintenance can get a report from the program to check on the state of bikes
+  - If broken, that bike will stay in the dock and cannot be released
+  - Maintenance can get a report from the program to check on the state of bikes
 
 
 #### The Technical bits
@@ -23,7 +23,35 @@ The classes within the program have been made with the Single Responsibility Pri
 The unit tests for the program are written in RSpec, following the Test Driven Development practice.
 
 
-| Languages  | Technique |
+| **Languages**  | **Technique** |
 | ------------- | ------------- |
-| Ruby  | TDD  |
-| RSpec |      |
+| *Ruby*  | *TDD*  |
+| *RSpec* |      |
+
+
+#### How to run...
+
+*_Clone the repo_*
+
+```
+git clone ...
+cd boris-bikesV2
+rspec --init
+```
+
+### ... Start an irb session
+
+```ruby
+irb
+require './lib/docking_station'
+```
+
+*_From here you can create a docking station_*
+
+```
+station = DockingStation.new # create a new station
+station.dock(Bike.new) # dock a working bike
+station.dock(Bike.new, false) # docking a broken bike
+station.release_bike # release a working bike
+station.release_bike # returns 'nil' as there are no working bikes available
+```
