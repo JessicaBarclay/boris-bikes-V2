@@ -33,5 +33,3 @@ class DockingStation
     @bikes.empty?
   end
 end
-
-#docking_station = DockingStation.new
