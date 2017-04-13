@@ -12,7 +12,9 @@ class DockingStation
 
   def release_bike
     fail 'No bikes available' if empty?
+    unless @bikes[-1].broken?
     @bikes.pop
+    end
   end
 
   def dock(bike, state=true)

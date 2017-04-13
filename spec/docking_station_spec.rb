@@ -66,6 +66,18 @@ describe DockingStation do
         end
     end
 
+    describe '#release_bike' do
+      it 'won\'t release broken bike' do
+        station = DockingStation.new
+        bike = Bike.new
+        station.dock(bike, false)
+        expect(station.release_bike).to eq nil
+      end
+    end
+
+
+
+
     # describe '#dock' do
     #   it 'report the state of a bike when docking' do
     #     station = DockingStation.new
