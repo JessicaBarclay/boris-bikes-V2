@@ -1,9 +1,29 @@
-## Boris Bikes Challenges
+## Boris Bikes
 
-London's Boris Bikes (well, 'Santander Cycles') are awesome. Anyone can hire out a bike and ride it around London.
+A program which replicates the functions of the 'Boris Bikes'  found in London.
+This program allows the user to release a working bike, and then dock that bike when finished. Maintenance to the docking stations can be assured in knowing the broken bikes are reported and will not be released to users.
 
-### Welcome to being a developer
+#### Functions of the program:
 
-Let's go back several years, to the days when there were no Boris Bikes. Imagine that you're a junior developer (that was easy). Transport for London, the body responsible for delivery of a new bike system, come to you with a plan: a network of docking stations and bikes that anyone can use. They want you to build a program that will emulate all the docking stations, bikes, and infrastructure (repair staff, and so on) required to make their dream a reality.
+1. Maintenance can create a docking station with a chosen capacity of bikes
+  1. User can dock a bike
+  2. User can release a working bike
+2. When a User docks a bike, they can state whether the bike is broken
+  1. If broken, that bike will stay in the dock and cannot be released
+  2. Maintenance can get a report from the program to check on the state of bikes
 
-To help structure your work, here are 22 challenges. They all build on one another. They require you to research things, to get stuck, and to find your own solutions. This is on purpose. A developer is a 'knowledge worker' - someone who will spend the majority of their time researching and learning how to solve problems. It'll suck for a bit, but with practice, you will get faster: and there's no better feeling than finding the answer to a problem that's been standing in your way for hours.
+
+#### The Technical bits
+
+This is a Ruby program written using TDD, with a focus on SOLID and DRY principles.
+It has been written considering deeply, the upkeep of the program. By working with DRY methodologies in mind, it is adaptable to change.
+
+The classes within the program have been made with the Single Responsibility Principle in mind. This means they have clear cut responsibilities, meaning that if another developer wants to update the code - they can clearly break down the behaviours of the program.
+
+The unit tests for the program are written in RSpec, following the Test Driven Development practice.
+
+
+| Languages  | Technique |
+| ------------- | ------------- |
+| Ruby  | TDD  |
+| RSpec |      |
