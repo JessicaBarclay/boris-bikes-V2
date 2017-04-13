@@ -17,7 +17,7 @@ class DockingStation
 
   def dock(bike, state=true)
     fail 'Docking station full' if full?
-    bike.working?(state)
+    state == true ? bike.working? : bike.report_broken
     @bikes << bike
   end
 

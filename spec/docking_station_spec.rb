@@ -66,10 +66,11 @@ describe DockingStation do
         end
     end
 
-    describe '#dock' do
-      it 'report the state of a bike when docking' do
-        station = DockingStation.new
-        expect(station.dock(Bike.new, false)).to include(false)
-      end
-    end
+    # describe '#dock' do
+    #   it 'report the state of a bike when docking' do
+    #     station = DockingStation.new
+    #     bike = Bike.new
+    #     expect(station.dock(bike, false)).to include("true")
+    #   end
+    # end
 end
