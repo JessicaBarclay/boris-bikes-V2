@@ -29,9 +29,9 @@ The unit tests for the program are written in RSpec, following the Test Driven D
 | *RSpec* |      |
 
 
-#### How to run...
+### How to run...
 
-*_Clone the repo_*
+*Clone the repo*
 
 ```
 git clone ...
@@ -39,16 +39,16 @@ cd boris-bikesV2
 rspec --init
 ```
 
-### ... Start an irb session
+### Next, start an irb session:
 
 ```ruby
 irb
 require './lib/docking_station'
 ```
 
-*_From here you can create a docking station_*
+### From here you can create a docking station and use the 'Boris Bikes' program as you wish!
 
-```
+```ruby
 station = DockingStation.new # create a new station
 station.dock(Bike.new) # dock a working bike
 station.dock(Bike.new, false) # docking a broken bike
