@@ -1,5 +1,11 @@
 class Bike
-    def working?(state = true)
-       state
-    end
+  attr_reader :state
+
+  # def initialize(state=true)
+  #   @state = state
+  # end
+
+  def working?(state=true)
+    state
+  end
 end

@@ -42,11 +42,11 @@ describe DockingStation do
             expect { subject.dock Bike.new }.to raise_error 'Docking station full'
         end
     end
-    
+
     it 'has a @capacity variable' do
         expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
-    
+
     it 'can specify a value for @capacity instead of the DEFAULT_CAPACITY when initialising a station' do
         station = DockingStation.new(30)
         expect(station.capacity).to eq 30
@@ -65,11 +65,11 @@ describe DockingStation do
             expect(subject).to respond_to(:dock).with(2).arguments
         end
     end
-    
-    describe Bike do
-        it 'stores the state of a bike as broken if a customer returns a broken bike' do
-            bike = Bike.new
-            expect(bike.working?).to include false
-        end
+
+    describe '#dock' do
+      it 'report the state of a bike when docking' do
+        station = DockingStation.new
+        expect(station.dock(Bike.new, false)).to include(false)
+      end
     end
 end
