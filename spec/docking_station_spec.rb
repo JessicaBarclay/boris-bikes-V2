@@ -65,5 +65,11 @@ describe DockingStation do
             expect(subject).to respond_to(:dock).with(2).arguments
         end
     end
-            
+    
+    describe Bike do
+        it 'stores the state of a bike as broken if a customer returns a broken bike' do
+            bike = Bike.new
+            expect(bike.working?).to include false
+        end
+    end
 end
